@@ -1,0 +1,135 @@
+*,*::before, *::after{
+    box-sizing: border-box;
+    font-weight: normal;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+}
+
+.calculator{
+    display: grid;
+    gap: 5px;
+    border-radius: 5px;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4,100px);
+    grid-template-rows: minmax(120px,auto) repeat(5,100px);
+}
+
+.calculator > button{
+    cursor: pointer;
+    font-size: 2rem;
+    border-radius: 8px;
+    border: 0.5px solid black;
+    outline: none;
+    box-shadow:
+  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+  0 12.5px 10px rgba(0, 0, 0, 0.06),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+  0 100px 80px rgba(0, 0, 0, 0.12)
+;
+}
+
+.calculator > button:hover{
+    background-color: #d4d4d4;
+}
+
+.span-two{
+    grid-column: span 2;
+}
+.span-four{
+    grid-column: span 4;
+}
+
+.ops{
+    background-color: #222222;
+    color: #fff; 
+}
+
+.ops:hover{
+    background-color: #fff;
+    color: #222222;
+}
+
+.equal{
+    background-color: #FCB55D;   
+}
+
+.display{
+    grid-column: 1 / -1;
+    background-color: #222222;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+    border-radius: 5px;
+    box-shadow:
+  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+  0 12.5px 10px rgba(0, 0, 0, 0.06),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+  0 100px 80px rgba(0, 0, 0, 0.12)
+;
+}
+
+.log{
+    grid-column: 1 / -1;
+    background-color: #222222;
+    color: #fff;
+   padding: 10px;
+   display: flex;
+   flex-direction: column;
+   align-items: flex-end;
+   justify-content: space-around;
+   padding: 10px;
+   word-wrap: break-word;
+   word-break: break-all;
+   border-radius: 5px;
+    box-shadow:
+  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+  0 12.5px 10px rgba(0, 0, 0, 0.06),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+  0 100px 80px rgba(0, 0, 0, 0.12)
+;
+}
+
+.display .history{
+    color: rgba(255,255,255,.75);
+    font-size: 1.5rem;
+}
+
+.display .active{
+    color: #fff;
+    font-size: 2.5rem;
+}
+
+
+@media (max-width: 450px){
+    body{
+        display: grid;
+        place-items: center;
+        
+    }
+    .calculator{
+        min-width: 400px;
+        grid-template-columns: repeat(4,80px);
+        overflow-x: auto;
+    }
+
+    .oops{
+        font-size: 10px; 
+    }
+}
+
+
